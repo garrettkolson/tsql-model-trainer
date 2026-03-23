@@ -1,0 +1,19 @@
+# TSQL Model Trainer Dependencies
+
+# Data collection
+datasets
+huggingface_hub
+PyGithub
+requests
+tqdm
+python-dotenv
+anthropic
+boto3
+smart_open
+
+# Training and evaluation
+transformers
+trl
+deepspeed
+torch
+accelerate

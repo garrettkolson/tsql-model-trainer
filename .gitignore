@@ -1,0 +1,23 @@
+# Environment variables — never commit credentials
+.env
+
+# Model output directories (large binary files, not tracked)
+outputs/
+../outputs/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
