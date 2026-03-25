@@ -213,7 +213,7 @@ def main():
             # Repo-level quality gate
             try:
                 langs = repo.get_languages()
-                total_bytes = sum(langs.values())
+                total_bytes = sum(int(v) for v in langs.values())
                 if total_bytes == 0:
                     total_bytes = 1
                 # Count both "TSQL" and "SQL" toward the ratio
