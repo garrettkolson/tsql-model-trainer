@@ -69,8 +69,8 @@ TSQL_STRONG_MARKERS = re.compile(
     r"|\bSTRING_AGG\b|\bSTRING_SPLIT\b"
     r"|\bOFFSET\b.*?\bFETCH\s+NEXT\b"             # SQL Server pagination
     r"|\bOPENJSON\b|\bFOR\s+JSON\b"               # JSON support (SQL Server 2016+)
-    r"|\bOPENXML\b|\bFOR\s+XML\b"                # XML support,
-    re.IGNORECASE,
+    r"|\bOPENXML\b|\bFOR\s+XML\b",                # XML support
+    re.IGNORECASE | re.DOTALL
 )
 
 # Patterns that positively identify non-TSQL dialects — if present, skip the file
@@ -83,7 +83,7 @@ GENERIC_SQL_ONLY = re.compile(
     r"|\bINSERT\s+OR\b"     # SQLite
     r"|\bPRAGMA\b"           # SQLite
     r"|\bPG_\w+"             # PostgreSQL built-in functions
-    r"|\bGEN_RANDOM_UUID\b"  # PostgreSQL,
+    r"|\bGEN_RANDOM_UUID\b",  # PostgreSQL,
     re.IGNORECASE,
 )
 

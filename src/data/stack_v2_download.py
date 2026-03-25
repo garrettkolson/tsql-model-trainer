@@ -112,7 +112,7 @@ def main():
     print("Note: The SQL subset is mixed-dialect. Expect ~15-35% TSQL pass rate.")
     ds = load_dataset(
         "bigcode/the-stack-v2-dedup",
-        "SQL",
+        "TSQL",
         split="train",
         streaming=True,
     )
